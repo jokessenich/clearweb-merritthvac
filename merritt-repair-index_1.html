@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merritt Repair LLC — Family-run HVAC in Hinesville, GA</title>
+<meta name="description" content="Merritt Repair LLC. HVAC repair, installation, and maintenance across Liberty, Long, Wayne, and Tattnall counties, Georgia. ~45-minute response, honest pricing, 5.0★ on Google.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#ffffff;
+    --paper-2:#f4f6f8;
+    --paper-3:#e9eef3;
+    --ink:#0c2340;
+    --ink-2:#1a345a;
+    --ink-mute:#5a6c82;
+    --hair:#dde2e8;
+    --hair-strong:#c4cdd8;
+    --red:#d93318;
+    --red-dark:#b62a12;
+    --cool:#1a5cab;
+    --shadow:0 2px 0 rgba(12,35,64,.04), 0 12px 32px -8px rgba(12,35,64,.1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    background:var(--paper);color:var(--ink);
+    font-size:16px;line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+
+  /* TYPE SYSTEM */
+  .display,h1,h2,h3,h4{
+    font-family:'Archivo',ui-sans-serif,system-ui,-apple-system,Helvetica,Arial,sans-serif;
+    font-weight:900;letter-spacing:-.02em;line-height:1.02;color:var(--ink);
+  }
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:.02em}
+  .eyebrow{
+    font-family:'JetBrains Mono',ui-monospace,monospace;
+    font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--red);
+  }
+
+  /* LAYOUT */
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+
+  /* UTILITY BAR */
+  .utility{background:var(--ink);color:#fff;font-size:13px}
+  .utility .wrap{display:flex;justify-content:space-between;align-items:center;padding:10px 40px;gap:20px}
+  .utility .left{display:flex;gap:24px;color:rgba(255,255,255,.78)}
+  .utility .left span{display:inline-flex;align-items:center;gap:8px}
+  .utility .left .dot{width:6px;height:6px;background:var(--red);border-radius:50%;display:inline-block;box-shadow:0 0 0 3px rgba(217,51,24,.18)}
+  .utility a.phone{color:#fff;font-weight:600;letter-spacing:.01em}
+  .utility a.phone b{color:#fff;margin-left:6px;font-family:'Archivo',sans-serif;font-weight:900;letter-spacing:.02em}
+
+  /* NAV */
+  nav.top{
+    background:#fff;border-bottom:1px solid var(--hair);
+    position:sticky;top:0;z-index:40;
+  }
+  nav.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;gap:40px}
+  .logo{display:flex;align-items:center;gap:12px;font-family:'Archivo Black',sans-serif;font-size:22px;letter-spacing:-.01em;color:var(--ink)}
+  .logo-mark{
+    width:42px;height:42px;background:var(--red);color:#fff;
+    display:grid;place-items:center;border-radius:6px;
+    font-family:'Archivo Black',sans-serif;font-size:17px;letter-spacing:-.03em;
+    box-shadow:inset 0 -3px 0 rgba(0,0,0,.14);
+  }
+  .logo-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-mute);margin-top:2px;font-weight:400;letter-spacing:.14em;text-transform:uppercase}
+  .logo-stack{display:flex;flex-direction:column;line-height:1}
+  nav.top ul{display:flex;gap:32px;list-style:none}
+  nav.top ul a{font-weight:500;font-size:15px;color:var(--ink);transition:color .15s}
+  nav.top ul a:hover{color:var(--red)}
+  .cta{
+    background:var(--red);color:#fff;padding:12px 22px;
+    font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:.01em;font-size:15px;
+    border-radius:4px;display:inline-flex;align-items:center;gap:10px;
+    box-shadow:0 2px 0 var(--red-dark);
+    transition:transform .15s, box-shadow .15s;
+  }
+  .cta:hover{transform:translateY(-1px);box-shadow:0 3px 0 var(--red-dark)}
+  .cta:active{transform:translateY(1px);box-shadow:0 1px 0 var(--red-dark)}
+  .cta svg{width:16px;height:16px}
+  .cta.ghost{background:#fff;color:var(--ink);border:2px solid var(--ink);box-shadow:none;padding:10px 20px}
+  .cta.ghost:hover{background:var(--ink);color:#fff}
+  .mobile-phone{display:none;font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;color:var(--red)}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    background:var(--paper-2);
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;grid-template-columns: 1.1fr 1fr;gap:0;
+    min-height:640px;
+    padding:0 40px;
+  }
+  .hero-content{padding:72px 48px 72px 0;align-self:center;max-width:640px}
+  .hero .eyebrow{margin-bottom:20px;display:inline-flex;align-items:center;gap:10px}
+  .hero .eyebrow::before{content:"";width:28px;height:2px;background:var(--red)}
+  .hero h1{
+    font-size:clamp(44px,5.4vw,76px);
+    font-family:'Archivo Black',sans-serif;font-weight:900;
+    letter-spacing:-.025em;line-height:.98;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+  .hero h1 .red{color:var(--red)}
+  .hero-sub{
+    font-size:18px;line-height:1.55;color:var(--ink-2);
+    max-width:480px;margin-top:28px;
+  }
+  .hero-ctas{margin-top:36px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .hero-ctas .cta{padding:16px 28px;font-size:16px}
+  .hero-ctas .small{font-size:13px;color:var(--ink-mute);margin-left:6px}
+  .hero-meta{
+    margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;
+    padding-top:28px;border-top:1px solid var(--hair-strong);
+  }
+  .hero-meta .m{display:flex;flex-direction:column;gap:4px}
+  .hero-meta .m .lbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
+  .hero-meta .m .val{font-family:'Archivo',sans-serif;font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.01em;display:flex;align-items:baseline;gap:4px}
+  .hero-meta .m .val small{font-size:14px;font-weight:500;color:var(--ink-mute)}
+
+  .hero-image{
+    position:relative;
+    margin-right:-40px;
+    align-self:stretch;
+    min-height:560px;
+  }
+  .hero-image img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  }
+  .hero-image::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg, var(--paper-2) 0%, transparent 22%);
+    pointer-events:none;z-index:1;
+  }
+  .hero-image .badge{
+    position:absolute;bottom:32px;right:32px;
+    background:var(--red);color:#fff;padding:20px 24px;
+    border-radius:6px;box-shadow:0 8px 24px rgba(12,35,64,.24);
+    z-index:2;max-width:280px;
+  }
+  .hero-image .badge .big{
+    font-family:'Archivo Black',sans-serif;font-size:38px;line-height:1;
+    display:flex;align-items:baseline;gap:6px;
+  }
+  .hero-image .badge .big small{font-size:16px;font-weight:800;opacity:.9}
+  .hero-image .badge .cap{
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;
+    letter-spacing:.14em;text-transform:uppercase;
+    opacity:.9;margin-bottom:6px;
+  }
+  .hero-image .badge .cap em{font-style:normal;color:#ffd8cf}
+  .hero-image .badge .note{font-size:13.5px;line-height:1.45;margin-top:10px;opacity:.95}
+
+  /* TRUST STRIP */
+  .trust{background:var(--ink);color:#fff}
+  .trust .wrap{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    padding:28px 40px;gap:32px;
+  }
+  .trust .t{display:flex;align-items:center;gap:14px}
+  .trust .t .icon{
+    width:40px;height:40px;border-radius:50%;
+    background:rgba(255,255,255,.08);display:grid;place-items:center;flex-shrink:0;
+    color:var(--red);
+  }
+  .trust .t .icon svg{width:20px;height:20px}
+  .trust .t .tx .lbl{font-size:12px;color:rgba(255,255,255,.6);font-weight:500}
+  .trust .t .tx .val{font-family:'Archivo',sans-serif;font-size:17px;font-weight:800;color:#fff;margin-top:1px;display:flex;align-items:baseline;gap:6px}
+  .trust .t .tx .val small{font-weight:500;font-size:13px;color:rgba(255,255,255,.7)}
+  .stars{color:#ffb21a;letter-spacing:1px}
+
+  /* SECTION BASE */
+  section{padding:96px 0}
+  .section-head{margin-bottom:56px;max-width:720px}
+  .section-head .eyebrow{margin-bottom:14px}
+  .section-head h2{font-size:clamp(36px,3.8vw,52px);font-family:'Archivo Black',sans-serif;text-transform:uppercase;line-height:1}
+  .section-head h2 .red{color:var(--red)}
+  .section-head p{margin-top:18px;color:var(--ink-mute);font-size:17px;max-width:580px;line-height:1.55}
+
+  /* SERVICES */
+  .services{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .svc{
+    background:#fff;border:1px solid var(--hair);border-radius:8px;overflow:hidden;
+    display:flex;flex-direction:column;
+    transition:border-color .18s, transform .18s, box-shadow .18s;
+  }
+  .svc:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:var(--shadow)}
+  .svc.primary{background:var(--ink);color:#fff;border-color:var(--ink);grid-column:span 2}
+  .svc .img-wrap{aspect-ratio:16/10;overflow:hidden;background:var(--paper-2);position:relative}
+  .svc .img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .svc:hover .img-wrap img{transform:scale(1.03)}
+  .svc.primary .img-wrap{aspect-ratio:16/8}
+  .svc .body-area{padding:28px 28px 30px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .svc.primary .body-area{padding:36px 36px 40px}
+  .svc .tag{
+    font-family:'JetBrains Mono',monospace;font-size:11px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:500;
+  }
+  .svc.primary .tag{color:#ff8060}
+  .svc h3{
+    font-family:'Archivo',sans-serif;font-weight:800;font-size:24px;
+    letter-spacing:-.01em;color:var(--ink);text-transform:uppercase;
+    line-height:1.05;margin-top:2px;
+  }
+  .svc.primary h3{color:#fff;font-size:34px}
+  .svc p{color:var(--ink-mute);font-size:14.5px;line-height:1.55;margin-top:6px}
+  .svc.primary p{color:rgba(255,255,255,.8);font-size:16px;max-width:440px}
+  .svc .price-chip{
+    margin-top:14px;display:inline-flex;align-items:center;gap:6px;
+    background:var(--paper-2);color:var(--ink);padding:6px 12px;border-radius:999px;
+    font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.04em;
+    width:fit-content;
+  }
+  .svc.primary .price-chip{background:rgba(255,255,255,.1);color:#fff}
+  .svc .price-chip b{color:var(--red);font-weight:600}
+  .svc.primary .price-chip b{color:#ff8060}
+
+  /* ABOUT */
+  .about{background:var(--paper-2);position:relative}
+  .about .wrap{display:grid;grid-template-columns: 1fr 1.1fr;gap:72px;align-items:center}
+  .about-img{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5;background:var(--ink)}
+  .about-img img{width:100%;height:100%;object-fit:cover}
+  .about-img .stamp{
+    position:absolute;bottom:24px;left:24px;right:24px;
+    background:#fff;padding:18px 20px;border-radius:6px;box-shadow:var(--shadow);
+  }
+  .about-img .stamp .l{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
+  .about-img .stamp .n{font-family:'Archivo',sans-serif;font-weight:800;font-size:18px;color:var(--ink);margin-top:4px;letter-spacing:-.005em}
+  .about-copy h2{font-size:clamp(36px,3.8vw,52px);text-transform:uppercase;line-height:1}
+  .about-copy h2 .red{color:var(--red)}
+  .about-copy p{color:var(--ink-2);font-size:17px;line-height:1.6;margin-top:20px;max-width:560px}
+  .principles{margin-top:36px;display:flex;flex-direction:column;gap:16px}
+  .principle{
+    display:grid;grid-template-columns:32px 1fr;gap:18px;
+    padding:20px 24px;background:#fff;border:1px solid var(--hair);border-radius:6px;
+    align-items:start;
+  }
+  .principle .check{
+    width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;
+    display:grid;place-items:center;flex-shrink:0;
+  }
+  .principle .check svg{width:14px;height:14px}
+  .principle .body{font-size:15px;line-height:1.5;color:var(--ink)}
+  .principle .body b{font-weight:700;color:var(--ink);display:block;font-family:'Archivo',sans-serif;font-size:15.5px;letter-spacing:-.005em}
+  .principle .body small{display:block;color:var(--ink-mute);font-size:13.5px;margin-top:4px;line-height:1.45}
+
+  /* COVERAGE */
+  .area{background:#fff}
+  .area .wrap{display:grid;grid-template-columns: 1fr 1.2fr;gap:72px;align-items:start}
+  .area h2{font-size:clamp(36px,3.8vw,52px);text-transform:uppercase;line-height:1}
+  .area h2 .red{color:var(--red)}
+  .area p{color:var(--ink-mute);font-size:16.5px;line-height:1.6;margin-top:18px;max-width:420px}
+  .county-list{margin-top:32px;display:flex;flex-direction:column;border-top:1px solid var(--hair)}
+  .county{
+    display:grid;grid-template-columns:28px 1fr auto auto;gap:18px;
+    padding:20px 0;border-bottom:1px solid var(--hair);
+    align-items:baseline;
+  }
+  .county .dot{
+    width:10px;height:10px;border-radius:50%;background:var(--red);
+    align-self:center;
+  }
+  .county .name{font-family:'Archivo',sans-serif;font-weight:800;font-size:22px;color:var(--ink);text-transform:uppercase;letter-spacing:-.005em}
+  .county .pop{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.04em}
+  .county .seat{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
+
+  .area-map{
+    background:var(--paper-2);border-radius:8px;padding:28px;
+    position:relative;overflow:hidden;min-height:460px;
+  }
+  .area-map .mtop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+  .area-map .mtop .lbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
+  .area-map .mtop .val{font-family:'Archivo',sans-serif;font-weight:800;font-size:18px;color:var(--ink);margin-top:2px}
+  .area-map .mtop .right{text-align:right}
+  .map-svg{width:100%;height:auto;display:block}
+
+  /* REVIEWS */
+  .reviews{background:var(--paper-2)}
+  .reviews .section-head{max-width:none;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+  .reviews .section-head .right{display:flex;align-items:center;gap:20px;justify-self:end}
+  .reviews .goog-card{
+    background:#fff;padding:20px 24px;border-radius:8px;display:flex;align-items:center;gap:18px;
+    box-shadow:var(--shadow);
+  }
+  .reviews .goog-card .num{font-family:'Archivo Black',sans-serif;font-size:38px;color:var(--ink);line-height:1}
+  .reviews .goog-card .num small{font-size:18px;color:var(--ink-mute);margin-left:2px}
+  .reviews .goog-card .right-g{display:flex;flex-direction:column;gap:2px}
+  .reviews .goog-card .right-g .s{color:#ffb21a;font-size:15px;letter-spacing:1px}
+  .reviews .goog-card .right-g .c{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.06em}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .review{
+    background:#fff;padding:28px;border-radius:8px;border:1px solid var(--hair);
+    display:flex;flex-direction:column;gap:14px;
+    transition:border-color .18s, transform .18s;
+  }
+  .review:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:var(--shadow)}
+  .review.big{grid-column:span 2;background:var(--ink);color:#fff;border-color:var(--ink)}
+  .review .stars{font-size:14px}
+  .review blockquote{
+    font-size:16px;line-height:1.5;color:var(--ink);font-weight:500;
+  }
+  .review.big blockquote{font-size:22px;line-height:1.4;color:#fff;font-weight:600;font-family:'Archivo',sans-serif;letter-spacing:-.005em}
+  .review blockquote::before{content:"\201C";color:var(--red);font-size:34px;line-height:0;vertical-align:-16px;margin-right:2px;font-family:'Archivo Black',sans-serif}
+  .review.big blockquote::before{color:#ff8060;font-size:44px;vertical-align:-20px}
+  .reviewer{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:10px}
+  .avatar{
+    width:36px;height:36px;border-radius:50%;background:var(--red);color:#fff;
+    display:grid;place-items:center;
+    font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;
+    flex-shrink:0;
+  }
+  .review.big .avatar{background:var(--red);width:44px;height:44px;font-size:17px}
+  .reviewer .n{font-family:'Archivo',sans-serif;font-weight:700;font-size:14.5px;color:var(--ink);line-height:1.1}
+  .review.big .reviewer .n{color:#fff;font-size:15.5px}
+  .reviewer .when{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.04em;margin-top:3px}
+  .review.big .reviewer .when{color:rgba(255,255,255,.7)}
+
+  /* CTA BLOCK */
+  .cta-block{
+    background:var(--red);color:#fff;
+    position:relative;overflow:hidden;
+  }
+  .cta-block::before{
+    content:"";position:absolute;top:-80px;right:-80px;width:340px;height:340px;
+    background:radial-gradient(circle, rgba(255,255,255,.12) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .cta-block .wrap{
+    padding:80px 40px;display:grid;grid-template-columns: 1.2fr 1fr;gap:56px;align-items:center;position:relative;z-index:1;
+  }
+  .cta-block h2{
+    color:#fff;font-size:clamp(38px,4.2vw,60px);text-transform:uppercase;line-height:1;
+  }
+  .cta-block h2 em{font-style:normal;display:block;color:rgba(255,255,255,.82)}
+  .cta-block p{color:rgba(255,255,255,.85);font-size:17px;line-height:1.55;margin-top:20px;max-width:460px}
+  .cta-right{background:#fff;color:var(--ink);border-radius:8px;padding:36px;box-shadow:0 16px 40px rgba(0,0,0,.16)}
+  .cta-right .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
+  .cta-right .big-phone{
+    display:block;margin-top:6px;font-family:'Archivo Black',sans-serif;
+    font-size:44px;color:var(--ink);letter-spacing:-.01em;line-height:1;
+    transition:color .15s;
+  }
+  .cta-right .big-phone:hover{color:var(--red)}
+  .cta-right .hrs{margin-top:20px;padding-top:20px;border-top:1px solid var(--hair);font-size:14px;color:var(--ink-2);line-height:1.5}
+  .cta-right .hrs b{color:var(--ink);font-family:'Archivo',sans-serif;font-weight:700;display:block;font-size:14.5px;letter-spacing:-.005em;margin-bottom:4px}
+  .cta-right .emerg{
+    margin-top:20px;padding:12px 14px;background:#fff5f3;border-left:3px solid var(--red);
+    font-size:13.5px;color:var(--ink);line-height:1.45;
+  }
+  .cta-right .emerg b{color:var(--red);font-weight:700}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:rgba(255,255,255,.75);padding:72px 0 36px}
+  footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding:0 40px}
+  footer .brand .logo{color:#fff;font-size:24px}
+  footer .brand .logo-tag{color:rgba(255,255,255,.55)}
+  footer .brand p{font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.65);margin-top:20px;max-width:340px}
+  footer h4{font-family:'Archivo',sans-serif;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  footer ul a{font-size:14.5px;color:rgba(255,255,255,.75);transition:color .15s}
+  footer ul a:hover{color:var(--red)}
+  footer .addr{font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.75)}
+  footer .addr b{color:#fff;display:block;margin-bottom:4px}
+  .legal{
+    margin-top:56px;padding:28px 40px 0;border-top:1px solid rgba(255,255,255,.1);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase;
+    max-width:1280px;margin-left:auto;margin-right:auto;
+  }
+
+  /* MOBILE */
+  @media (max-width: 1000px){
+    nav.top ul{display:none}
+    nav.top .cta{display:none}
+    .mobile-phone{display:inline-flex;align-items:center;gap:6px}
+    .hero .wrap{grid-template-columns:1fr;padding:0}
+    .hero-content{padding:56px 24px 48px;max-width:none}
+    .hero-image{margin:0;min-height:360px;aspect-ratio:16/10}
+    .hero-image::before{background:none}
+    .hero-meta{grid-template-columns:repeat(2,1fr)}
+    .wrap{padding:0 24px}
+    section{padding:72px 0}
+    .services{grid-template-columns:1fr}
+    .svc.primary{grid-column:span 1}
+    .about .wrap{grid-template-columns:1fr;gap:48px}
+    .about-img{aspect-ratio:16/10;max-width:100%}
+    .area .wrap{grid-template-columns:1fr;gap:40px}
+    .reviews .section-head{grid-template-columns:1fr;gap:24px;align-items:start}
+    .reviews .section-head .right{justify-self:start}
+    .reviews-grid{grid-template-columns:1fr}
+    .review.big{grid-column:span 1}
+    .cta-block .wrap{grid-template-columns:1fr;gap:40px;padding:64px 24px}
+    footer .wrap{grid-template-columns:1fr 1fr;gap:32px;padding:0 24px}
+    footer .brand{grid-column:span 2}
+    .trust .wrap{grid-template-columns:repeat(2,1fr);gap:20px;padding:20px 24px}
+    .legal{padding:24px 24px 0}
+    .utility .wrap{padding:10px 24px}
+    .utility .left span:nth-child(2){display:none}
+  }
+  @media (max-width: 560px){
+    .utility{font-size:12px}
+    .utility .left span:first-child{display:none}
+    .hero h1{font-size:clamp(36px,10vw,56px)}
+    .hero-meta{grid-template-columns:1fr 1fr;gap:20px}
+    .hero-ctas{flex-direction:column;align-items:stretch}
+    .hero-ctas .cta{justify-content:center}
+    .section-head h2{font-size:36px}
+    .reviews-grid{grid-template-columns:1fr}
+    .cta-right .big-phone{font-size:34px}
+  }
+</style>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div class="utility">
+  <div class="wrap">
+    <div class="left">
+      <span><span class="dot"></span>Dispatching now · Mon–Sat 7am–7pm</span>
+      <span>Licensed &amp; insured · State of Georgia</span>
+    </div>
+    <a href="tel:+19120000000" class="phone">Emergency line<b>(912) 000-0000</b></a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="top">
+  <div class="wrap">
+    <a href="#" class="logo">
+      <span class="logo-mark">MR</span>
+      <span class="logo-stack">
+        <span>Merritt Repair</span>
+        <span class="logo-tag">HVAC · Hinesville, GA</span>
+      </span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#area">Service area</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a href="tel:+19120000000" class="cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (912) 000-0000
+    </a>
+    <a href="tel:+19120000000" class="mobile-phone">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-content">
+      <span class="eyebrow">Hinesville, GA · Family-run since day one</span>
+      <h1>No-nonsense HVAC for <span class="red">South Georgia.</span></h1>
+      <p class="hero-sub">
+        Repair, installation, and maintenance across Liberty, Long, Wayne, and Tattnall counties. Straight answers. Fair prices. Usually on-site within the hour.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:+19120000000" class="cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Merritt Repair
+        </a>
+        <a href="#services" class="cta ghost">See what we fix →</a>
+      </div>
+      <div class="hero-meta">
+        <div class="m">
+          <span class="lbl">Rating</span>
+          <span class="val">5.0 <small class="stars">★★★★★</small></span>
+        </div>
+        <div class="m">
+          <span class="lbl">Response</span>
+          <span class="val">~45 <small>min</small></span>
+        </div>
+        <div class="m">
+          <span class="lbl">Coverage</span>
+          <span class="val">4 <small>counties</small></span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600&amp;h=1400&amp;fit=crop" alt="HVAC technician inspecting a residential outdoor condenser unit" width="1600" height="1400" loading="eager" fetchpriority="high" decoding="async">
+      <div class="badge">
+        <div class="cap"><em>Median response time</em></div>
+        <div class="big">~45<small>min</small></div>
+        <div class="note">Most service calls answered same-day. No dispatch fees.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="wrap">
+    <div class="t">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4zm-1.5 14.5l-4-4 1.41-1.41L10.5 13.67l5.59-5.59L17.5 9.5l-7 7z"/></svg>
+      </div>
+      <div class="tx">
+        <div class="lbl">Licensed</div>
+        <div class="val">Georgia <small>state-licensed</small></div>
+      </div>
+    </div>
+    <div class="t">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.39 7.36H22l-6.2 4.52L18.18 22 12 17.27 5.82 22l2.38-8.12L2 9.36h7.61L12 2z"/></svg>
+      </div>
+      <div class="tx">
+        <div class="lbl">Google rating</div>
+        <div class="val">5.0 <small>· 13 reviews</small></div>
+      </div>
+    </div>
+    <div class="t">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="tx">
+        <div class="lbl">Same-day</div>
+        <div class="val">~45 min <small>avg. response</small></div>
+      </div>
+    </div>
+    <div class="t">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V6a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zM9 6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2H9V6z"/></svg>
+      </div>
+      <div class="tx">
+        <div class="lbl">Residential &amp; commercial</div>
+        <div class="val">Full service <small>HVAC</small></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we do</span>
+      <h2>HVAC services <span class="red">that actually work.</span></h2>
+      <p>Residential and commercial HVAC across four counties. If it cools, heats, or moves air, we probably work on it. Every job starts with a diagnosis and a quote — you see the price before we start pulling parts.</p>
+    </div>
+
+    <div class="services">
+      <div class="svc primary">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/6471911/pexels-photo-6471911.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="HVAC technician using gauges and tools on an air conditioning system" width="900" height="562" loading="lazy" decoding="async">
+        </div>
+        <div class="body-area">
+          <span class="tag">01 · Primary service</span>
+          <h3>AC Repair &amp; Diagnostics</h3>
+          <p>Compressor, capacitor, coolant leaks, airflow, blower motors — we diagnose the whole system, not just the part that's obviously screaming. Typical turnaround: same-day.</p>
+          <span class="price-chip">Diagnostic <b>$89</b> · applied to repair</span>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1614447413576-b346c641c128?fm=jpg&amp;q=75&amp;w=900&amp;auto=format&amp;fit=crop" alt="Close-up of a condenser unit fan and coil" width="900" height="562" loading="lazy" decoding="async">
+        </div>
+        <div class="body-area">
+          <span class="tag">02</span>
+          <h3>Heating &amp; Heat Pumps</h3>
+          <p>Gas furnaces, heat pumps, electric strip heat. Georgia winters are short, but the week they show up, you want the heat working.</p>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/5463581/pexels-photo-5463581.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Technician installing a rooftop AC unit" width="900" height="562" loading="lazy" decoding="async">
+        </div>
+        <div class="body-area">
+          <span class="tag">03</span>
+          <h3>New Installation</h3>
+          <p>Full system replacements with brands worth installing. Honest load calculations — no oversized units sold for margin.</p>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/5463580/pexels-photo-5463580.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Technician using gauges on an AC unit" width="900" height="562" loading="lazy" decoding="async">
+        </div>
+        <div class="body-area">
+          <span class="tag">04</span>
+          <h3>Seasonal Maintenance</h3>
+          <p>Twice-a-year tune-ups that extend system life. Coil cleaning, refrigerant check, capacitor test. Scheduled fairly, priced fairly.</p>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="img-wrap">
+          <img src="https://images.pexels.com/photos/6471914/pexels-photo-6471914.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Technician kneeling outdoors performing HVAC maintenance" width="900" height="562" loading="lazy" decoding="async">
+        </div>
+        <div class="body-area">
+          <span class="tag">05</span>
+          <h3>Mobile Homes &amp; Rentals</h3>
+          <p>Priority dispatch for landlords and property managers. We know the units and the turnaround pressure.</p>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1615309662243-70f6df917b59?fm=jpg&amp;q=75&amp;w=900&amp;auto=format&amp;fit=crop" alt="Ductwork installation detail" width="900" height="562" loading="lazy" decoding="async">
+        </div>
+        <div class="body-area">
+          <span class="tag">06</span>
+          <h3>Light Commercial</h3>
+          <p>Packaged rooftop units, small-business cooling, and office HVAC across the region. Service contracts available.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img">
+      <img src="https://images.pexels.com/photos/6471912/pexels-photo-6471912.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000&amp;h=1250&amp;fit=crop" alt="HVAC technician holding a refrigerant manifold gauge, performing maintenance" width="1000" height="1250" loading="lazy" decoding="async">
+      <div class="stamp">
+        <div class="l">Owner &amp; lead technician</div>
+        <div class="n">Vinson &amp; the Merritt Repair crew</div>
+      </div>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">About the shop</span>
+      <h2 style="margin-top:14px">Local crew. <span class="red">Honest work.</span></h2>
+      <p>Merritt Repair is a family-run HVAC shop based in Hinesville, working homes, rental properties, and small commercial sites across four coastal Georgia counties.</p>
+      <p>Our approach is simple: diagnose the real problem, explain it plainly, and quote a fair price before we pick up a tool. If that sounds obvious, ask around about how often it actually happens.</p>
+
+      <div class="principles">
+        <div class="principle">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="body">
+            <b>Diagnosis, quote, approval — then we turn a wrench.</b>
+            <small>No inflated "emergency" fees. You see the price before work starts.</small>
+          </div>
+        </div>
+        <div class="principle">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="body">
+            <b>Licensed, insured, and bonded in Georgia.</b>
+            <small>State license available on request. Every visit is documented.</small>
+          </div>
+        </div>
+        <div class="principle">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="body">
+            <b>Most service calls answered the same day.</b>
+            <small>Typical on-site arrival: around 45 minutes from the initial call.</small>
+          </div>
+        </div>
+        <div class="principle">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div class="body">
+            <b>Written warranty on every repair and install.</b>
+            <small>If something fails that we just fixed, we come back on our dime.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="area" id="area">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Service area</span>
+      <h2 style="margin-top:14px">Four counties of <span class="red">coastal Georgia.</span></h2>
+      <p>Based in Hinesville, dispatched across the region. If you're just outside these counties, call anyway — we'll tell you honestly whether we can get there in time.</p>
+
+      <div class="county-list">
+        <div class="county">
+          <span class="dot"></span>
+          <span class="name">Liberty</span>
+          <span class="pop">pop. ~66k</span>
+          <span class="seat">HQ · Hinesville</span>
+        </div>
+        <div class="county">
+          <span class="dot" style="background:var(--ink)"></span>
+          <span class="name">Long</span>
+          <span class="pop">pop. ~16k</span>
+          <span class="seat">Ludowici</span>
+        </div>
+        <div class="county">
+          <span class="dot" style="background:var(--ink)"></span>
+          <span class="name">Wayne</span>
+          <span class="pop">pop. ~29k</span>
+          <span class="seat">Jesup</span>
+        </div>
+        <div class="county">
+          <span class="dot" style="background:var(--ink)"></span>
+          <span class="name">Tattnall</span>
+          <span class="pop">pop. ~22k</span>
+          <span class="seat">Reidsville</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="area-map">
+      <div class="mtop">
+        <div>
+          <div class="lbl">Service radius</div>
+          <div class="val">~45 miles from Hinesville</div>
+        </div>
+        <div class="right">
+          <div class="lbl">Coastal GA · Zone 8B</div>
+          <div class="val" style="font-size:14px;color:var(--ink-mute);font-weight:500">Humid subtropical</div>
+        </div>
+      </div>
+      <svg class="map-svg" viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="#c4cdd8" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <!-- Tattnall NW -->
+        <path d="M 40 30 L 190 45 L 200 120 L 60 135 Z" fill="url(#hatch)" stroke="#0c2340" stroke-width="1.2"/>
+        <text x="110" y="85" font-family="Archivo, sans-serif" font-size="14" font-weight="800" fill="#0c2340">TATTNALL</text>
+        <!-- Long N -->
+        <path d="M 190 45 L 330 50 L 340 135 L 200 120 Z" fill="url(#hatch)" stroke="#0c2340" stroke-width="1.2"/>
+        <text x="250" y="90" font-family="Archivo, sans-serif" font-size="14" font-weight="800" fill="#0c2340">LONG</text>
+        <!-- Wayne E -->
+        <path d="M 330 50 L 440 70 L 440 200 L 340 200 Z" fill="url(#hatch)" stroke="#0c2340" stroke-width="1.2"/>
+        <text x="370" y="130" font-family="Archivo, sans-serif" font-size="14" font-weight="800" fill="#0c2340">WAYNE</text>
+        <!-- Liberty S (filled red) -->
+        <path d="M 60 135 L 340 135 L 340 290 L 80 300 Z" fill="#d93318" stroke="#d93318" stroke-width="1.2"/>
+        <text x="170" y="215" font-family="Archivo Black, sans-serif" font-size="18" fill="#ffffff">LIBERTY</text>
+        <text x="170" y="235" font-family="JetBrains Mono, monospace" font-size="10" fill="#ffffff" letter-spacing="1.5" opacity="0.9">HQ · HINESVILLE</text>
+        <!-- HQ marker -->
+        <circle cx="200" cy="225" r="6" fill="#ffffff" stroke="#0c2340" stroke-width="2"/>
+        <circle cx="200" cy="225" r="12" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.6"/>
+        <!-- Coastline indicator -->
+        <path d="M 440 200 Q 455 240 445 280 Q 460 300 450 330" fill="none" stroke="#1a5cab" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
+        <text x="440" y="320" font-family="JetBrains Mono, monospace" font-size="9" fill="#1a5cab" letter-spacing="1" opacity="0.8">ATLANTIC</text>
+        <!-- North arrow -->
+        <g transform="translate(420, 28)">
+          <path d="M 0 -12 L 6 8 L 0 4 L -6 8 Z" fill="#0c2340"/>
+          <text x="0" y="22" font-family="JetBrains Mono, monospace" font-size="9" fill="#0c2340" text-anchor="middle" letter-spacing="1">N</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">What folks are saying</span>
+        <h2 style="margin-top:14px">Real reviews. <span class="red">Real names.</span></h2>
+        <p style="max-width:480px">Every review below is pulled from our verified Google Business profile. Names and phrasing are theirs, not ours.</p>
+      </div>
+      <div class="right">
+        <div class="goog-card">
+          <div class="num">5.0<small>/5</small></div>
+          <div class="right-g">
+            <div class="s">★★★★★</div>
+            <div class="c">13 Google reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review big">
+        <div class="stars">★★★★★</div>
+        <blockquote>45 minutes after calling them, they showed up and got to work. They spotted the issue with my HVAC system, spotted the problem, and got the fix. Total time on-site: 2 hours.</blockquote>
+        <div class="reviewer">
+          <div class="avatar">RT</div>
+          <div>
+            <div class="n">Roger Tiapula</div>
+            <div class="when">Google · 6 months ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <blockquote>This company truly went above and beyond. They came out quickly, fixed the issue, and made sure everything was working before leaving. The technician was friendly, honest, and clearly knew what he was doing.</blockquote>
+        <div class="reviewer">
+          <div class="avatar">AC</div>
+          <div>
+            <div class="n">Angie Copeland</div>
+            <div class="when">Google · 8 months ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <blockquote>Great service and reliable. Very knowledgeable of HVAC system.</blockquote>
+        <div class="reviewer">
+          <div class="avatar">CW</div>
+          <div>
+            <div class="n">Chris White</div>
+            <div class="when">Google · 1 year ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <blockquote>Vinson has repaired and serviced many of my rental mobile homes as well as my personal residence. He always does so in a timely manner and efficiently. His prices are reasonable as well.</blockquote>
+        <div class="reviewer">
+          <div class="avatar">TH</div>
+          <div>
+            <div class="n">Terry Lee Horton</div>
+            <div class="when">Google · 1 year ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <blockquote>They were very professional and were there when they said they would be. Very easy to communicate with.</blockquote>
+        <div class="reviewer">
+          <div class="avatar">AC</div>
+          <div>
+            <div class="n">Avery Cureton</div>
+            <div class="when">Google · 10 months ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-block" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>AC down? <em>Pick up the phone.</em></h2>
+      <p>Most service calls answered same-day. Tell us where you are and what it's doing — we'll tell you honestly when we can be there. No dispatch fees. No pressure.</p>
+    </div>
+    <div class="cta-right">
+      <div class="lbl">Dispatch line</div>
+      <a href="tel:+19120000000" class="big-phone">(912) 000-0000</a>
+      <div class="hrs">
+        <b>Hours</b>
+        Monday–Saturday · 7am–7pm<br>
+        Sunday · Emergency service
+      </div>
+      <div class="emerg">
+        <b>After-hours emergency?</b> Leave a message — we check the line and call back fast.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo" style="color:#fff;display:flex;align-items:center;gap:12px">
+        <span class="logo-mark" style="background:var(--red)">MR</span>
+        <span class="logo-stack">
+          <span>Merritt Repair</span>
+          <span class="logo-tag" style="color:rgba(255,255,255,.55)">HVAC · Hinesville, GA</span>
+        </span>
+      </div>
+      <p>Family-run HVAC: repair, installation, and maintenance for homes and small commercial sites across coastal South Georgia. Licensed &amp; insured.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">AC Repair</a></li>
+        <li><a href="#services">Heating &amp; Heat Pumps</a></li>
+        <li><a href="#services">New Installation</a></li>
+        <li><a href="#services">Seasonal Maintenance</a></li>
+        <li><a href="#services">Light Commercial</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Counties served</h4>
+      <ul>
+        <li>Liberty County</li>
+        <li>Long County</li>
+        <li>Wayne County</li>
+        <li>Tattnall County</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="addr">
+        <b>(912) 000-0000</b>
+        Hinesville, Georgia<br>
+        Mon–Sat · 7am – 7pm
+      </div>
+    </div>
+  </div>
+  <div class="legal">
+    <div>© 2026 Merritt Repair LLC · Licensed &amp; insured in Georgia</div>
+    <div>Site preview</div>
+  </div>
+</footer>
+
+</body>
+</html>
